@@ -1,0 +1,46 @@
+.btn-primary{
+    background-color: $brand-yellow;
+    color: #855B35; //Utilizado somente nesse momento
+    transition: background-color .3s; //Para que tenha uma transição do hover de uma maneira suave e nao seca
+
+    //No SASS para ações do tipo hover entre outras é utlizado o &:(ação que queira dar)
+    &:hover{
+        background-color: #FFDC5C;
+    }
+}
+
+.btn-secondary{
+    border: 1px solid #00A5F0;
+    background-color: transparent;
+    color: $brand-light-blue;
+    transition: all .3s; //Para que tenha uma transição de tudo que esta no hover de uma maneira suave e nao seca
+
+    //No caso o & é usado para concatenação
+    //No SASS para ações do tipo hover entre outras é utlizado o &:(ação que queira dar)
+    &:hover{
+        background-color: $brand-light-blue;
+        color: #FFFFFF;
+    }
+    //& foi usado para concatenar com a classe white que é uma variação do botao secondary
+    &.white{
+        border: 1px solid white;
+        color: white;
+        &:hover{
+            background-color: white;
+            color: $brand-green-light;
+        }
+    }
+}
+
+.btn-primary,
+.btn-secondary{
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    padding: 0 2.6rem;
+    border-radius: 122px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 4.8rem; //Para que o texto fique centralizado nesse contexto no botao
+}
+
+
